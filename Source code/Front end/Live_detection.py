@@ -56,14 +56,14 @@ def update_video_feed():
         count=count+1
         if count==10:
         #if time.time() - start_time >= detection_duration:
-            account_sid = "ACeed5e5f6d6f651629af657537d183315"
-            auth_token = "633cc46b4982bc86145d6ee89040bf96"
+            account_sid = "ur_account_id"
+            auth_token = "ur_account_token"
             client = Client(account_sid, auth_token)
            
             call = client.calls.create(
               twiml='<Response><Say>Violence detected in your area, immediately take necessary action.</Say></Response>',
-              to="+918610607601",
-              from_="+15739282755"
+              to="ur_phone_no",
+              from_="twilio_ph_no"
             )
            
             print(call.sid)  
